@@ -40,4 +40,14 @@ public class CustomerController {
     }
 
 
+    @PutMapping("/customers/{customerId}/accounts/{accountId}")
+    public CustomerResource createAccount(@PathVariable String customerId, @PathVariable String accountId) {
+        System.out.println("PathVariable = " + customerId);
+
+        Customer customer = customerAppService.addAccount(UUID.fromString(customerId), accountId);
+
+        return CustomerResource.from(customer);
+    }
+
+
 }

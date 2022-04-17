@@ -7,6 +7,7 @@ import java.util.UUID;
 public class Customer {
     private UUID customerId;
     private Address address;
+    private List<AccountId> accountIds = new ArrayList<>();
 
     public Customer(Address address) {
         this.customerId = UUID.randomUUID();
@@ -17,6 +18,10 @@ public class Customer {
         this.address = address;
     }
 
+    public void add(AccountId accountId) {
+        accountIds.add(accountId);
+    }
+
     public UUID getCustomerId() {
         return customerId;
     }
@@ -25,11 +30,18 @@ public class Customer {
         return address;
     }
 
+    public List<AccountId> getAccountIds() {
+        return accountIds;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
                 "customerId=" + customerId +
                 ", address=" + address +
+                ", accountIds=" + accountIds +
                 '}';
     }
+
+
 }
