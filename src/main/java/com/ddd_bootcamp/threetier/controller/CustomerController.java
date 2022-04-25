@@ -34,7 +34,8 @@ public class CustomerController {
         System.out.println("request = " + request);
         System.out.println("PathVariable = " + customerId);
 
-        Customer customer = customerAppService.updateAddress(UUID.fromString(customerId), new Address(request.getCity()));
+        Customer customer = customerAppService.updateAddress(UUID.fromString(customerId),
+                new Address(request.getCity()));
 
         return CustomerResource.from(customer);
     }

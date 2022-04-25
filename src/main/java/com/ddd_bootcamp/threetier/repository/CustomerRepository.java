@@ -1,11 +1,11 @@
 package com.ddd_bootcamp.threetier.repository;
 
 import com.ddd_bootcamp.domain.Customer;
+import com.ddd_bootcamp.domain.CustomerId;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 //Customer Repository or Data Access Layer
 //Using in-memory map instead of db for demo
@@ -13,7 +13,7 @@ import java.util.UUID;
 @Repository
 public class CustomerRepository {
 
-    private Map<UUID, Customer> customerMap = new HashMap<>();
+    private Map<CustomerId, Customer> customerMap = new HashMap<>();
 
     public Customer save(Customer customer) {
         System.out.println("in Repository customer = " + customer);
@@ -21,7 +21,7 @@ public class CustomerRepository {
         return customer;
     }
 
-    public Customer find(UUID customerId) {
+    public Customer find(CustomerId customerId) {
         return customerMap.get(customerId);
     }
 }
