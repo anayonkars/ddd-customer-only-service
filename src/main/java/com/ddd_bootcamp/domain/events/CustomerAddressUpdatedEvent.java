@@ -7,10 +7,10 @@ import java.util.UUID;
 
 public class CustomerAddressUpdatedEvent implements DomainEvent {
     private UUID customerId;
-    private AddressVO address;
+    private AddressData address;
 
 
-    public CustomerAddressUpdatedEvent(UUID customerId, AddressVO address) {
+    public CustomerAddressUpdatedEvent(UUID customerId, AddressData address) {
         this.customerId = customerId;
         this.address = address;
     }
@@ -19,7 +19,7 @@ public class CustomerAddressUpdatedEvent implements DomainEvent {
         return customerId;
     }
 
-    public AddressVO getAddress() {
+    public AddressData getAddress() {
         return address;
     }
 }

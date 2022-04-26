@@ -1,10 +1,10 @@
 package com.ddd_bootcamp.domain.events;
 
-public class AddressVO {
+public class AddressData {
 
     private String city;
 
-    public AddressVO(String city) {
+    public AddressData(String city) {
         this.city = city;
     }
 
