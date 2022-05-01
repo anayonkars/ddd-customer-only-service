@@ -1,5 +1,7 @@
 package com.ddd_bootcamp.domain;
 
+import com.ddd_bootcamp.domain.events.DomainEvent;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -8,6 +10,8 @@ public class Customer implements Aggregate {
     private CustomerId customerId;
     private Address address;
     private List<AccountId> accountIds = new ArrayList<>();
+    private List<DomainEvent> events = new ArrayList<>();
+
 
     public Customer(Address address) {
         this.customerId = new CustomerId(UUID.randomUUID());
