@@ -68,31 +68,17 @@ public class CustomerAppService {
 
 
 //        List<DomainEvent> domainEvents = customer.getDomainEvents();
-//        kafkaTemplate.send(domainEvents);  //customer-topic
+//        domainEvents.forEach( domainEvent -> {
+//            kafkaTemplate.send("customer-topic", domainEvent);
+//        });
 //        customer.clearEvents();
 //        commit Customer to database
-//        Transaction outbox pattern to atomically put
-//        events on kafka and write customer to relational DB.
-//        System.out.println("restTemplate = " + restTemplate);
-//        Customer savedCustomer = customerRepository.save(customer);
-//
-//        commit transaction
-//
-//        List<String> accountIds = customer.getAccountIds().stream()
-//                .map(accountId -> accountId.getAccountIdUUID().toString
-//         Address oldAddress = customer.getAddress();
-//
-//        List<DomainEvent> domainEvents = customer.getDomainEvents();
-//
-//        kafkaTemplate.publish(domainEvents);  //customer-topic
-//        customer.clearEvents();
-//        customerRepository.save(customer);
-//        commit Customer to database
-//
 //        Transaction outbox pattern to atomically put
 //        events on kafka and write customer to relational DB.
 
 //        Customer savedCustomer = customerRepository.save(customer);
+//        commit transaction
+//
 
     }
 
