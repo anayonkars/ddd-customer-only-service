@@ -24,3 +24,7 @@ curl --location --request PUT 'http://localhost:8080/customers/53b0c526-4318-44b
 --data-raw '{
 "city": "mumbai"
 }'
+
+
+//        events.add(new CustomerAddressUpdatedEvent(customerId.getCustomerId(),
+new com.ddd_bootcamp.domain.events.AddressData(address.getCity())));
